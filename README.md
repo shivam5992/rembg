@@ -139,11 +139,12 @@ import numpy as np
 import io
 from PIL import Image
 
+# Uncomment the following linse if working with trucated image formats (ex. JPEG / JPG)
+# from PIL import ImageFile
+# ImageFile.LOAD_TRUNCATED_IMAGES = True
+
 input_path = 'input.png'
 output_path = 'out.png'
-
-# Uncomment the following line if working with trucated image formats (ex. JPEG / JPG)
-# ImageFile.LOAD_TRUNCATED_IMAGES = True
 
 f = np.fromfile(input_path)
 result = remove(f)
